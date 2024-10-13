@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.135.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Optimizing LLM Performance :: Create a new AWS account.</title>
+
+    
+    <link href="/css/nucleus.css?1728550173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1728550173" rel="stylesheet">
+    <link href="/css/hybrid.css?1728550173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1728550173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1728550173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728550173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1728550173" rel="stylesheet">
+    <link href="/css/theme.css?1728550173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1728550173" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1728550173" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1728550173"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/6-langchain/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1728550173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1728550173"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1728550173"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/" title="Overview AWS Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/">
+           <b> 1 </b> Overview AWS Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-keyfeature/" title="Key Features of Amazon Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-keyfeature/">
+           <b> 2 </b> Key Features of Amazon Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-foundationmodels/" title="Typical componets of a generative AI application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-foundationmodels/">
+           <b> 3 </b> Typical componets of a generative AI application
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-rags/" title="RAG Overview" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-rags/">
+           <b> 4 </b> RAG Overview
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-bedrockfms/" title="Amazon Bedrock FMs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/5-bedrockfms/">
+           <b> 5 </b> Amazon Bedrock FMs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6-langchain/" title="Optimizing LLM Performance" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/6-langchain/">
+           <b> 6 </b> Optimizing LLM Performance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7-architecturepatterns/" title="Introduction to Architecture Patterns" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/7-architecturepatterns/">
+           <b> 7 </b> Introduction to Architecture Patterns
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/8-getstart/" title="How to get started with Amazon Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/8-getstart/">
+           <b> 8 </b> How to get started with Amazon Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/6-langchain/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>26-11-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Getting Start with AWS Bedrock</a> > Optimizing LLM Performance
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Optimizing LLM Performance
+            </h1>
+          
+
+        
+
+
+
+	<h4 id="llm-performance-challenges">LLM performance challenges</h4>
+<p>Large language models (LLMs) are pretrained on large data collections, and they can perform multiple tasks, such as text generation, text summarization, question answering, and sentiment analysis. However, the models do not perform well when the task requires dealing with out-of-domain data or remembering conversational context.</p>
+<p>These challenges lead to hallucinations or inaccurate responses. A single prompt to the LLM might not always provide the expected result. It might require the chaining of requests to the model to produce accurate results.</p>
+<h4 id="simplifying-llm-development-with-langchain">Simplifying LLM development with LangChain</h4>
+<p>LangChain provides the software building blocks to reduce the complexity of building functionality from scratch. You can use it to take full advantage of the power of the LLMs.</p>
+<p><img alt="Bedrock" src="/images/5/1.png?featherlight=false&width=90pc"></p>
+<p>LLMs do not retain state between invocations, so the application must manage any context. For example, to give a chat experience, the LLM needs the conversation as part of the context to produce the correct results. Additionally, LLMs can develop reasoning to solve problems, such as multistep problems where the application needs to find information in steps to solve a problem. LangChain provides components to make it more efficient to perform the common tasks of managing context or the sequencing of steps when interacting with an LLM.</p>
+<h4 id="using-langchain-components">Using LangChain components</h4>
+<p>LangChain is open source and is currently available in three programming languages: Python, TypeScript, and JavaScript. LangChain consists of components such as schema, models, prompts, indexes, memory, chains, and agents.</p>
+<p>You can use these components to build applications, such as the Retrieval Augmented Generation (RAG) based question answering chatbots. You can also use these components for text summarization, code generation, and interacting with APIs.</p>
+<p><img alt="Bedrock" src="/images/5/2.png"></p>
+<h4 id="supported-integrations-for-aws">Supported integrations for AWS</h4>
+<p>LangChain supports integrations with numerous software providers, including Amazon. Some of the most important integrations related to Amazon include LLMs, prompt templates, chains, chat models, text embedding models, document loaders, retrievers, and agents.</p>
+<p><em>Schema</em> The schema provides the structure for the conversation to construct the prompts generated by LangChain that are sent to the LLM. For example, the ChatMessages schema describes how to construct chat prompts with human messages, artificial intelligence (AI) messages, examples, and documents.</p>
+<p>In the following lessons, you will learn about the most important AWS and LangChain integrations for models, prompt templates, indexes, memory, chains, and agents.</p>
+<p><img alt="Bedrock" src="/images/5/3.png"></p>
+<p><strong>LLMs</strong></p>
+<p>LLMs take text as input and generate text as output, and LangChain provides LLM components to interact with different language models. The LLM class is an abstraction for working across different providers and is used by LangChain to interact with an LLM model.</p>
+<p><img alt="Bedrock" src="/images/5/5.jpg"></p>
+<p><strong>Amazon Bedrock</strong></p>
+<p>LangChain supports Amazon Bedrock as an LLM. For more information, refer to the API. Amazon Bedrock currently supports Titan Text models from Amazon, Jurassic models from AI21, Claude from Anthropic, Cohere Command and Embed, Llama models from Meta, Stable Diffusion models from Stability AI, and Mistral models from Mistral AI.</p>
+<p>The following example demonstrates how to create an instance of the Amazon Bedrock class and invoke an Amazon Titan LLM from the LangChain LLM module. The model_id is the value of the selected model available in Amazon Bedrock.</p>
+<pre tabindex="0"><code>import boto3
+from langchain_aws import BedrockLLM
+bedrock_client = boto3.client(&#39;bedrock-runtime&#39;,region_name=&#34;us-east-1&#34;)
+
+
+inference_modifiers = {&#34;temperature&#34;: 0.3, &#34;maxTokenCount&#34;: 512
+
+llm = BedrockLLM(
+     client = bedrock_client,
+     model_id=&#34;amazon.titan-tg1-large&#34;,
+     model_kwargs =inference_modifiers
+)
+
+response = llm.invoke(&#34;What is the largest city in Vermont?&#34;)
+print(response)
+</code></pre><p><strong>Chat models</strong></p>
+<p>Conversational interfaces, such as chatbots and virtual assistants, can lower the cost of customer support, while improving customer experience. LangChain provides a chat models component to build conversational applications. This component accepts content in the form of messages that contain input text.</p>
+<p><img alt="Bedrock" src="/images/5/6.png"></p>
+<p><strong>Chat models example</strong></p>
+<p>The following example demonstrates how you can get a response from an LLM by passing a user request to the LLM.</p>
+<pre tabindex="0"><code>Input
+
+from langchain_aws import ChatBedrock as Bedrock
+from langchain.schema import HumanMessage
+chat = Bedrock(model_id=&#34;anthropic.claude-3-sonnet-20240229-v1:0&#34;, model_kwargs={&#34;temperature&#34;:0.1})
+
+messages = [
+     HumanMessage(
+          content=&#34;I would like to try Indian food, what do you suggest should I try?&#34;
+     )
+]
+chat.invoke(messages)
+</code></pre><p><strong>Sample response</strong></p>
+<blockquote>
+<p><strong>AIMessage(content=</strong>&ldquo;Here are some delicious and popular Indian dish recommendations for someone trying Indian food for the first time:\n\n- Butter Chicken (Murgh Makhani) - Tender chicken in an aromatic tomato-based curry with butter and cream. It&rsquo;s flavorful but not too spicy.\n\n- Chicken Tikka Masala - Chunks of roasted marinated chicken in a creamy tomato-based sauce.\n\n- Palak Paneer - A vegetarian dish with paneer (fresh cheese cubes) cooked in a thick spinach-based curry.\n\n- Chana Masala - A vegetarian chickpea curry flavored with spices like cumin, coriander and garam masala.\n\n- Samosas - Fried or baked pastry pockets stuffed with a savory potato/vegetable filling.\n\n- Naan - Leavened oven-baked flatbread, perfect for soaking up curries. Try garlic or butter naan.\n\n- Biryani - A flavorful mixed rice dish with meat/vegetables and aromatic spices.\n\nI&rsquo;d recommend getting a combination platter or thali to sample a variety of dishes on your first visit. Start with milder dishes and work your way up if you want more heat/spice. Indian food has incredible depth of flavor!&rdquo;, additional_kwargs={&lsquo;usage&rsquo;: {&lsquo;prompt_tokens&rsquo;: 23, &lsquo;completion_tokens&rsquo;: 300, &rsquo;total_tokens&rsquo;: 323}}, response_metadata={&lsquo;model_id&rsquo;: &lsquo;anthropic.claude-3-sonnet-20240229-v1:0&rsquo;, &lsquo;usage&rsquo;: {&lsquo;prompt_tokens&rsquo;: 23, &lsquo;completion_tokens&rsquo;: 300, &rsquo;total_tokens&rsquo;: 323}}, id=&lsquo;run-09f0ef8a-90c0-47c3-b172-546b084d1288-0&rsquo;)</p>
+</blockquote>
+<p><strong>Text embedding models</strong></p>
+<p>Text embedding models take text as input and then output numerical representations of the text in the form of a vector of floating-point numbers. The numerical representations are called word embeddings, and they capture the semantic meaning of the text.</p>
+<p>The embeddings are used in various natural language processing (NLP) tasks, such as sentiment analysis, text classification, and information retrieval. You can save the embeddings in a vector database to improve search accuracy and for faster retrieval.</p>
+<p><img alt="Bedrock" src="/images/5/7.jpg"></p>
+<p><strong>Embedding example</strong></p>
+<p>The following example demonstrates how to call a BedrockEmbeddings client to send text to the Amazon Titan Embeddings model to get embeddings as a response.</p>
+<pre tabindex="0"><code>from langchain.embeddings import BedrockEmbeddings
+
+embeddings = BedrockEmbeddings(
+     region_name=&#34;us-east-1&#34;,
+     model_id=&#34;amazon.titan-embed-text-v1&#34;
+)
+ 
+embeddings.embed_query(&#34;Cooper is a puppy that likes to eat beef&#34;)
+</code></pre><p>In the following example, the baseline sentence is about a dog that likes to eat beef. A list of candidate phrases is compared against the baseline and sorted by similarity, with 0 being most similar and 1 being least similar.</p>
+<p><strong>Baseline: Cooper is a dog that likes to eat beef.</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>Score</strong></th>
+          <th style="text-align: left"><strong>Text</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">0.035882</td>
+          <td style="text-align: left">Cooper is a puppy that likes to eat beef.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.083690</td>
+          <td style="text-align: left">Beef is what a dog named Cooper likes.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.109997</td>
+          <td style="text-align: left">Cooper is a dog that hates eating beef.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.135489</td>
+          <td style="text-align: left">Cooper is a dog that hates eating beef.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.184443</td>
+          <td style="text-align: left">Cooper is a dog that likes to eat chicken</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.192230</td>
+          <td style="text-align: left">Fido is a dog that likes to eat beef</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.194594</td>
+          <td style="text-align: left">Cooper is a cat that likes to eat beef</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.228607</td>
+          <td style="text-align: left">Spot is a dog that likes to eat beef.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.264782</td>
+          <td style="text-align: left">Cooper is a man that likes to eat beef</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.351404</td>
+          <td style="text-align: left">Cooper ist ein Hund, der gerne Rindfleisch frisst.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">0.799773</td>
+          <td style="text-align: left">A cooper is someone that makes barrels.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">1.016293</td>
+          <td style="text-align: left">Amazon Web Services provides on-demand cloud computing solutions and APIs on a pay-as-you-go basis.</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="prompt-templates-in-langchain">Prompt templates in LangChain</h4>
+<p>LangChain provides predefined prompt templates in the form of text strings that can take a set of parameters from the user and generate a prompt. Prompt templates make prompt engineering more efficient and make it possible to reuse prompts.</p>
+<p><img alt="Bedrock" src="/images/5/8.png"></p>
+<p><strong>Prompt example</strong></p>
+<pre tabindex="0"><code>from langchain import PromptTemplate
+
+# Create a prompt template that has multiple input variables
+multi_var_prompt = PromptTemplate(
+     input_variables=[&#34;customerName&#34;, &#34;feedbackFromCustomer&#34;],
+     template=&#34;&#34;&#34;
+     Human: Create an email to {customerName} in response to the following customer service feedback that was received from the customer: 
+     &lt;customer_feedback&gt; 
+          {feedbackFromCustomer}
+     &lt;/customer_feedback&gt;
+     Assistant:&#34;&#34;&#34;
+)
+# Pass in values to the input variables
+prompt = multi_var_prompt.format(customerName=&#34;John Doe&#34;,
+          feedbackFromCustomer=&#34;&#34;&#34;Hello AnyCompany, 
+     I am very pleased with the recent experience I had when I called your customer support.
+      I got an immediate call back, and the representative was very knowledgeable in fixing the problem. 
+     We are very happy with the response provided and will consider recommending it to other businesses.
+     &#34;&#34;&#34;
+)
+</code></pre><h4 id="structuring-documents-with-indexes">Structuring Documents with Indexes</h4>
+<p><strong>Document loaders</strong></p>
+<p>When building generative AI applications using the RAG approach, documents must be loaded from different sources to the LLMs to generate embeddings.</p>
+<p>LangChain provides the document loaders component, which is responsible for loading documents from various sources. Sources can include a database, an online store, or a local store. You can index and use information from these sources for information retrieval. You can use the document loaders to load different types of documents, such as HTML, PDF, and code.</p>
+<p><strong>Document loaders example</strong></p>
+<p>The following example demonstrates the loading of a document from Amazon Simple Storage Service (Amazon S3) using the S3FileLoader module.</p>
+<pre tabindex="0"><code>from langchain.document_loaders import S3FileLoader
+
+loader = S3FileLoader(&#34;mysource_bucket&#34;,&#34;sample-file.docx&#34;)
+data = loader.load()
+</code></pre><p><strong>Retriever</strong></p>
+<p>LangChain includes a retriever component for fetching relevant documents to combine with language models. When a user submits a query, the retriever searches through the document index to find the most relevant documents. It then sends the results to the application for further processing.</p>
+<p>When building RAG applications on AWS, you can use Amazon Kendra to index and query various data sources. Amazon Kendra is a fully managed service that provides semantic search capabilities for state-of-the-art ranking of documents and passages.</p>
+<p>Amazon Kendra also comes with pre-built connectors to popular data sources, such as Amazon S3, SharePoint, Confluence, and websites. It supports common document formats, such as HTML, Microsoft Word, PowerPoint, PDF, Excel, and PureText files.</p>
+<p><strong>Retriever example</strong></p>
+<p>The following example demonstrates the use of the AmazonKendraRetriever to query an Amazon Kendra index and pass the results from that call to an LLM as context along with a prompt.</p>
+<pre tabindex="0"><code>from langchain.retrievers import AmazonKendraRetriever
+from langchain.chains import ConversationalRetrievalChain
+from langchain.prompts import PromptTemplate
+from langchain_aws import ChatBedrock 
+
+
+llm = ChatBedrock(
+     model_kwargs={&#34;max_tokens_to_sample&#34;:300,&#34;temperature&#34;:1,&#34;top_k&#34;:250,&#34;top_p&#34;:0.999,&#34;anthropic_version&#34;:&#34;bedrock-2023-05-31&#34;},
+     model_id=&#34;anthropic.claude-3-sonnet-20240229-v1:0&#34;
+)
+
+retriever = AmazonKendraRetriever(index_id=kendra_index_id,top_k=5,region_name=region)
+
+prompt_template = &#34;&#34;&#34; Human: This is a friendly conversation between a human and an AI.
+The AI is talkative and provides specific details from its context but limits it to 240 tokens.
+If the AI does not know the answer to a question, it truthfully says it
+does not know.
+
+Assistant: OK, got it, I&#39;ll be a talkative truthful AI assistant.
+
+Human: Here are a few documents in &lt;documents&gt; tags:
+&lt;documents&gt;
+{context}
+&lt;/documents&gt;
+Based on the above documents, provide a detailed answer for, {question}
+Answer &#34;do not know&#34; if not present in the document.
+
+Assistant:
+ &#34;&#34;&#34;
+
+PROMPT = PromptTemplate(
+     template=prompt_template, input_variables=[&#34;context&#34;, &#34;question&#34;]
+)
+
+response = ConversationalRetrievalChain.from_llm(
+     llm=llm,
+     retriever=retriever,
+     return_source_documents=True,
+     combine_docs_chain_kwargs={&#34;prompt&#34;:PROMPT},
+     verbose=True)
+</code></pre><p><strong>Vector stores</strong></p>
+<p>When building generative AI applications, such as question answering bots, the LLMs produce accurate results when relevant company-specific or user-specific data is given as context.</p>
+<p>You can use the RAG approach, and follow these steps:</p>
+<ol>
+<li>You can convert the company-specific data, such as documents, into embeddings using the text embeddings model (described in the previous section).</li>
+<li>You can then store the embeddings in a vector database.</li>
+<li>You can extract the relevant documents based on the user request from the vector database.</li>
+<li>You can then pass them to the LLM as context for an accurate response.</li>
+</ol>
+<p>LangChain supports both open source and provider-specific vector stores. LangChain supports vector engine for Amazon OpenSearch Serverless and the pgvector extension available with Amazon Aurora PostgreSQL-Compatible Edition. LangChain provides the vector stores component to query the supported vector stores for relevant data.</p>
+<p><strong>Vector store example</strong></p>
+<p>The following example demonstrates how to create an instance of the VectorStore class and use OpenSearch Serverless as a vector store to query embeddings.</p>
+<pre tabindex="0"><code>import os
+from langchain.embeddings import BedrockEmbeddings
+from langchain.vectorstores import OpenSearchVectorSearch
+
+index_name = os.environ[&#34;AOSS_INDEX_NAME&#34;]
+endpoint = os.environ[&#34;AOSS_COLLECTION_ENDPOINT&#34;]
+
+embeddings = BedrockEmbeddings(client=bedrock_client)
+
+vector_store = OpenSearchVectorSearch(
+     index_name=index_name,
+     embedding_function=embeddings,
+     opensearch_url=endpoint,
+     use_ssl=True,
+     verify_certs=True,
+)
+retriever = vector_store.as_retriever()
+</code></pre><h4 id="langchain-memory">LangChain memory</h4>
+<p>LangChain memory provides the mechanism to store and summarize (if needed) prior conversational elements that are included in the context on subsequent invocations. LangChain provides components in the form of helper utilities for managing and manipulating previous chat messages. These utilities are modular. You can chain them with other components and interact with different types of abstractions to build powerful chatbots.</p>
+<p>In LangChain, there are different ways you can implement conversational memory for a chatbot as follows:</p>
+<ul>
+<li>
+<p><strong>ConversationBufferMemory</strong>: The ConversationBufferMemory is the most common type of memory in LangChain. It includes past conversations that happened between the user and the LLM.</p>
+</li>
+<li>
+<p><strong>ConversationChain</strong>: The ConversationBufferMemory is built on top of ConversationChain, which is designed for managing conversations. For a complete list of supported memory types</p>
+</li>
+</ul>
+<p><strong>Memory example</strong></p>
+<p>The following example demonstrates the use of ConversationBufferMemory to store the previous conversation and have the LLM respond to subsequent questions by using the chat history.</p>
+<pre tabindex="0"><code>from langchain.chains import ConversationChain
+from langchain_aws import BedrockLLM
+from langchain.memory import ConversationBufferMemory
+bedrock_client = boto3.client(&#39;bedrock-runtime&#39;,region_name=&#34;us-east-1&#34;)
+
+
+titan_llm = BedrockLLM(model_id=&#34;amazon.titan-tg1-large&#34;, client=bedrock_client)
+memory = ConversationBufferMemory()
+
+conversation = ConversationChain(
+     llm=titan_llm, verbose=True, memory=memory
+)
+
+print(conversation.predict(input=&#34;hi! I am in Los Angeles. What are some of the popular site seeing places?&#34;))
+</code></pre><p>Ask a question without mentioning the city Los Angeles to find out how the model responds according to the previous conversation.</p>
+<pre tabindex="0"><code>print(conversation.predict(input=&#34;What is closest beach that I can go to?&#34;))
+</code></pre><h4 id="chaining-components">Chaining components</h4>
+<p>At its core, a chain is a set of components that run together. The component can be a call to an LLM, an API, or a sequence of other chains. The component has an input format and an output. For example, the LLMChain takes in an LLM, a prompt template, and parameters to the prompt template. It returns the output of the LLM call. The chain can parse the output of the LLM to a specific format and return the data in a more structured way.</p>
+<p><strong>Processing large amounts of data</strong></p>
+<p>Chains are also helpful when processing more data than can be contained in the context. For example, you might do a document summarization against a very large document. The chain will chunk up the document and make multiple calls to the LLM to produce a single summary.</p>
+<p>There are different types of chains that LangChain supports, among which the LLMChain is a common one.</p>
+<p><strong>Chain example</strong></p>
+<p>The following example demonstrates how to use chains to call an LLM multiple times in a sequence.</p>
+<pre tabindex="0"><code>from langchain import PromptTemplate
+from langchain.chains import LLMChain
+from langchain_aws import ChatBedrock as Bedrock
+
+chat = Bedrock(
+     region_name = &#34;us-east-1&#34;,
+     model_kwargs={&#34;temperature&#34;:1,&#34;top_k&#34;:250,&#34;top_p&#34;:0.999,&#34;anthropic_version&#34;:&#34;bedrock-2023-05-31&#34;},
+     model_id=&#34;anthropic.claude-3-sonnet-20240229-v1:0&#34;
+)
+
+multi_var_prompt = PromptTemplate(
+     input_variables=[&#34;company&#34;],
+     template=&#34;Create a list with the names of the main metrics tracked in the reports of {company}?&#34;,
+)
+ 
+chain = LLMChain(llm=chat, prompt=multi_var_prompt)
+answers = chain.invoke(&#34;Amazon&#34;)
+print(answers)
+
+answers = chain.invoke(&#34;AWS&#34;)
+print(answers)
+</code></pre><h4 id="using-langchain-agents">Using LangChain agents</h4>
+<p>LangChain agents can interact with external sources, such as search engines, calculators, APIs, or databases. The agents can also run code to perform actions to assist the LLMs in generating accurate responses. LangChain provides the chain interface to sequence multiple components to build an application. An LLMChain is an example of a basic chain.</p>
+<p>The following mechanisms use basic chains:</p>
+<ul>
+<li>
+<p>A RAG application can use an LLMChain to return a response. The response is based on two pieces of information: the user query and a context supplied as a set of documents retrieved from a vector store.</p>
+</li>
+<li>
+<p>A RouterChain is an example of a complex chain. For example, you can use a RouterChain to select one prompt template from the available prompt templates based on user input.</p>
+</li>
+<li>
+<p>The LangChain agents act as reasoning engines for the LLMs to decide the actions to take and the order in which to take the actions. An action can be a tool that uses the results from a search engine or a math calculator.</p>
+</li>
+</ul>
+<p><strong>LangChain agent features</strong></p>
+<p>The LangChain agent follows a sequence of actions :</p>
+<ul>
+<li>LangChain provides tools and toolkits (a group of three to five different tools) in the form of functions for the agent to call. The agent is formed with access to an LLM, a set of tools, and a stopping condition.</li>
+<li>The agent uses the ReAct (reasoning and acting) prompting framework to choose the most relevant tool from the set of tools provided based on the user input.</li>
+<li>The agent repeatedly decides the action, runs the action, and observes the output of the tool until the stopping condition is met.</li>
+</ul>
+<p><strong>Agent example</strong></p>
+<p>The following example demonstrates how to initialize an Agent, Tool, and LLM to form a chain and have the ZERO_SHOT ReAct agent call the in-built tool LLMMathChain to do math calculations separately and pass the result to the LLM for the final response.</p>
+<pre tabindex="0"><code>from langchain.agents import load_tools
+from langchain.agents import initialize_agent, Tool
+from langchain.agents import AgentType
+from langchain import LLMMathChain
+from langchain_aws import ChatBedrock
+from langchain.agents import AgentExecutor, create_react_agent
+
+chat = ChatBedrock(model_id=&#34;anthropic.claude-3-sonnet-20240229-v1:0&#34;, model_kwargs={&#34;temperature&#34;:0.1})
+
+prompt_template = &#34;&#34;&#34;Answer the following questions as best you can.
+You have access to the following tools:\n\n{tools}\n\n
+Use the following format:\n\nQuestion: the input question you must answer\n
+Thought: you should always think about what to do\n
+Action: the action to take, should be one of [{tool_names}]\n
+Action Input: the input to the action\nObservation: the result of the action\n...
+(this Thought/Action/Action Input/Observation can repeat N times)\n
+Thought: I now know the final answer\n
+Final Answer: the final answer to the original input question\n\nBegin!\n\n
+Question: {input}\nThought:{agent_scratchpad}
+&#34;&#34;&#34;
+modelId = &#34;anthropic.claude-3-sonnet-20240229-v1:0&#34;
+
+react_agent_llm = ChatBedrock(model_id=modelId, client=bedrock_client)
+math_chain_llm = ChatBedrock(model_id=modelId, client=bedrock_client)
+
+tools = load_tools([], llm=react_agent_llm)
+
+llm_math_chain = LLMMathChain.from_llm(llm=math_chain_llm, verbose=True)
+
+llm_math_chain.llm_chain.prompt.template = &#34;&#34;&#34;Human: Given a question with a math problem, provide only a single line mathematical expression that solves the problem in the following format. Don&#39;t solve the expression only create a parsable expression.
+text
+{{single line mathematical expression that solves the problem}}
+
+
+Assistant:
+Here is an example response with a single line mathematical expression for solving a math problem:
+text
+37593**(1/5)
+
+
+Human: {question}
+Assistant:&#34;&#34;&#34;
+
+tools.append(
+     Tool.from_function(
+          func=llm_math_chain.run,
+          name=&#34;Calculator&#34;,
+          description=&#34;Useful for when you need to answer questions about math.&#34;,
+     )
+)
+
+react_agent = create_react_agent(react_agent_llm,
+     tools,
+     PromptTemplate.from_template(prompt_template)
+          # max_iteration=2,
+          # return_intermediate_steps=True,
+          # handle_parsing_errors=True,
+     )
+
+agent_executor = AgentExecutor(
+agent=react_agent,
+tools=tools,
+verbose=True,
+handle_parsing_errors=True,
+max_iterations = 10 # useful when agent is stuck in a loop
+)
+
+agent_executor.invoke({&#34;input&#34;: &#34;What is the distance between San Francisco and Los Angeles? If I travel from San Francisco to Los Angeles with the speed of 40MPH how long will it take to reach?&#34;})
+</code></pre>
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/5-bedrockfms/" title="Amazon Bedrock FMs"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/7-architecturepatterns/" title="Introduction to Architecture Patterns" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1728550173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1728550173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1728550173"></script>
+    <script src="/js/jquery.sticky.js?1728550173"></script>
+    <script src="/js/featherlight.min.js?1728550173"></script>
+    <script src="/js/highlight.pack.js?1728550173"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1728550173"></script>
+    <script src="/js/learn.js?1728550173"></script>
+    <script src="/js/hugo-learn.js?1728550173"></script>
+
+    <link href="/mermaid/mermaid.css?1728550173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1728550173"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

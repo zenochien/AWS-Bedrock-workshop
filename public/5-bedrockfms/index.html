@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.135.0">
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Amazon Bedrock FMs :: Create a new AWS account.</title>
+
+    
+    <link href="/css/nucleus.css?1728550173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1728550173" rel="stylesheet">
+    <link href="/css/hybrid.css?1728550173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1728550173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1728550173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1728550173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1728550173" rel="stylesheet">
+    <link href="/css/theme.css?1728550173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1728550173" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1728550173" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1728550173"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/5-bedrockfms/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1728550173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1728550173"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/\/localhost:1313\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1728550173"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-introduce/" title="Overview AWS Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-introduce/">
+           <b> 1 </b> Overview AWS Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-keyfeature/" title="Key Features of Amazon Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-keyfeature/">
+           <b> 2 </b> Key Features of Amazon Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-foundationmodels/" title="Typical componets of a generative AI application" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-foundationmodels/">
+           <b> 3 </b> Typical componets of a generative AI application
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-rags/" title="RAG Overview" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-rags/">
+           <b> 4 </b> RAG Overview
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/5-bedrockfms/" title="Amazon Bedrock FMs" class="dd-item 
+        
+        active
+        
+        ">
+      <a href="/5-bedrockfms/">
+           <b> 5 </b> Amazon Bedrock FMs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6-langchain/" title="Optimizing LLM Performance" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/6-langchain/">
+           <b> 6 </b> Optimizing LLM Performance
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/7-architecturepatterns/" title="Introduction to Architecture Patterns" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/7-architecturepatterns/">
+           <b> 7 </b> Introduction to Architecture Patterns
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/8-getstart/" title="How to get started with Amazon Bedrock" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/8-getstart/">
+           <b> 8 </b> How to get started with Amazon Bedrock
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://aws.amazon.com/blogs"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/awsstudygroupfcj"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="//localhost:1313/5-bedrockfms/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830891&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>26-11-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+           
+            <i>
+                <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng</a>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            <a href='/'>Getting Start with AWS Bedrock</a> > Amazon Bedrock FMs
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Amazon Bedrock FMs
+            </h1>
+          
+
+        
+
+
+
+	<p>Amazon Bedrock offers a wide choice of foundation models (FMs) from leading artificial intelligence (AI) startups and Amazon. Each of these FMs cater to different generative artificial intelligence (generative AI) use cases, such as summarization, language translation, coding, and image generation.</p>
+<p>Note: For users with screen readers, use table mode to read the table.</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: left"><strong>Company</strong></th>
+          <th style="text-align: left"><strong>Foundation Model</strong></th>
+          <th style="text-align: left"><strong>Description</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">Amazon</td>
+          <td style="text-align: left">Amazon Titan</td>
+          <td style="text-align: left">Family of models built by Amazon that are pretrained on large datasets, which makes them powerfull, general-purpose models.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">AI21 Labs</td>
+          <td style="text-align: left">Jurassic-2</td>
+          <td style="text-align: left">Multilingual large language models (LLMs) for text generation in Spanish, French, German, Portuguse, Italian, and Dutch.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Anthropic</td>
+          <td style="text-align: left">Claude 2</td>
+          <td style="text-align: left">LLM for thoughtful dialogue, content creation, complex reasioning, creativity, and coding based on Constitutional AI and harmlessness training.</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Cohere</td>
+          <td style="text-align: left">Command and Embed</td>
+          <td style="text-align: left">Text generation model for business applications and embeddings model for search, clustering, or classification in more than 100 languages. Now available: Stable Diffusion XL (SDXL) 1.0</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Stability AI</td>
+          <td style="text-align: left">Stable Diffusion</td>
+          <td style="text-align: left">Text-to-image model for generation fo uinque, realistic, high-quality images, art, logos, and designs.</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="working-with-amazon-bedrock-fms">Working with Amazon Bedrock FMs</h4>
+<p>Some inference parameters are common across most models, such as temperature, Top P, Top K, and response length. You will dive deep into unique model-specific parameters and I/O configuration you can tune to achieve the desired output based on the use case.</p>
+<p><strong>Amazon Titan</strong></p>
+<p>Amazon Titan models are Amazon foundation models. Amazon offers the Amazon Titan Text model and the Amazon Titan Embeddings model through Amazon Bedrock.</p>
+<p>Amazon Titan models support the following unique inference parameters in addition to temperature, Top P, and response length, which are common parameters across multiple models.</p>
+<p><strong>Stop sequences</strong></p>
+<p>With stop sequences (stopSequences), you can specify character sequences to indicate where the model should stop. Use the pipe symbol (|) to separate different sequences (maximum 20 characters).</p>
+<p><strong>Amazon Titan Text</strong></p>
+<p>Amazon Titan Text is a generative LLM for tasks such as summarization, text generation, classification, open-ended question answering, and information extraction. The text generation model is trained on many different programming languages and Rich Text Format (RTF), like tables, JSON, comma-separated values (CSV), and others.</p>
+<pre tabindex="0"><code>Input
+{
+     &#34;inputText&#34;: &#34;&lt;prompt&gt;&#34;,
+     &#34;textGenerationConfig&#34; : {
+          &#34;maxTokenCount&#34;: 512,
+          &#34;stopSequences&#34;: [],
+          &#34;temperature&#34;: 0.1,
+          &#34;topP&#34;: 0.9
+     }
+} 
+</code></pre><p>The following example shows the output from Amazon Titan Text for the input supplied in the previous code block. The model returns the output along with parameters, such as the number of input and output tokens generated.</p>
+<pre tabindex="0"><code>Output
+{
+     &#34;inputTextTokenCount&#34;: 613,
+     &#34;results&#34;: [{
+          &#34;tokenCount&#34;: 219,
+          &#34;outputText&#34;: &#34;&lt;output&gt;&#34;
+     }]
+} 
+</code></pre><p><strong>Amazon Titan Embeddings</strong></p>
+<p>The Amazon Titan Embeddings model translates text inputs (words and phrases) into numerical representations (embeddings). Applications of this model include personalization and search. Comparing embeddings produces more relevant and contextual responses than word matching.</p>
+<pre tabindex="0"><code>Input
+{
+     body = json.dumps({&#34;inputText&#34;: &lt;prompt&gt;,})
+     model_id = &#39;amazon.titan-embed-text-v1&#39;
+     accept = &#39;application/json&#39;
+     content_type = &#39;application/json&#39;
+     response = bedrock_runtime.invoke_model(
+          body=body,
+          modelId=model_id,
+          accept=accept,
+          contentType=content_type )
+     response_body = json.loads(response[&#39;body&#39;].read())
+     embedding = response_body.get(&#39;embedding&#39;)
+} 
+</code></pre><p>This will generate an embeddings vector consisting of numbers that look like the following output.</p>
+<pre tabindex="0"><code>Output
+[0.82421875, -0.6953125, -0.115722656, 0.87890625, 0.05883789, -0.020385742, 0.32421875, -0.00078201294, -0.40234375, 0.44140625, ...] 
+</code></pre><p><strong>AI21 Jurassic-2 (Mid and Ultra)</strong>
+Common parameters for Jurassic-2 models include temperature, Top P, and stop sequences. Jurassic-2 models support the following unique parameters to control randomness, diversity, length, or repetition in the response:</p>
+<ul>
+<li><strong>Max completion length (maxTokens)</strong>: Specify the maximum number of tokens to use in the generated response.</li>
+<li><strong>Presence penalty (presencePenalty)</strong>: Use a higher value to lower the probability of generating new tokens that already appear at least once in the prompt or in the completion.</li>
+<li><strong>Count penalty (countPenalty)</strong>: Use a higher value to lower the probability of generating new tokens that already appear at least once in the prompt or in the completion. The value is proportional to the number of appearances.</li>
+<li><strong>Frequency penalty (frequencyPenalty)</strong>: Use a higher value to lower the probability of generating new tokens that already appear at least once in the prompt or in the completion. The value is proportional to the frequency of the token appearances (normalized to text length).</li>
+<li><strong>Penalize special tokens</strong>: Reduce the probability of repetition of special characters. The default values are true as follows:
+<ul>
+<li><strong>Whitespaces (applyToWhitespaces)</strong>: A <strong>true</strong> value applies the penalty to white spaces and new lines.</li>
+<li><strong>Punctuations (applyToPunctuation)</strong>: A <strong>true</strong> value applies the penalty to punctuation.</li>
+<li><strong>Numbers (applyToNumbers)</strong>: A <strong>true</strong> value applies the penalty to numbers.</li>
+<li><strong>Stop words (applyToStopwords)</strong>: A <strong>true</strong> value applies the penalty to stop words.</li>
+<li><strong>Emojis (applyToEmojis)</strong>: A <strong>true</strong> value excludes emojis from the penalty.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Jurassic-2 Mid</strong>
+This is a mid-sized model that is optimized to follow natural language instructions and context, so there is no need to provide it with any examples. It is ideal for composing human-like text and solving complex language tasks, such as question answering, and summarization.</p>
+<p><strong>Jurassic-2 Ultra</strong>
+Ultra is a large-sized model that you can apply to language comprehension or generation tasks. Use cases include generating marketing copy, powering chatbots, assisting with creative writing, performing summarization, and extracting information.</p>
+<pre tabindex="0"><code>Input
+{
+     &#34;prompt&#34;: &#34;&lt;prompt&gt;&#34;,
+     &#34;maxTokens&#34;: 200,
+     &#34;temperature&#34;: 0.5,
+     &#34;topP&#34;: 0.5,
+     &#34;stopSequences&#34;: [],
+     &#34;countPenalty&#34;: {&#34;scale&#34;: 0},
+     &#34;presencePenalty&#34;: {&#34;scale&#34;: 0},
+     &#34;frequencyPenalty&#34;: {&#34;scale&#34;: 0}
+} 
+</code></pre><pre tabindex="0"><code>Output
+{
+     &#34;id&#34;: 1234,
+     &#34;prompt&#34;: {
+          &#34;text&#34;: &#34;&lt;prompt&gt;&#34;,
+          &#34;tokens&#34;: [
+               {
+                    &#34;generatedToken&#34;: {
+                         &#34;token&#34;: &#34;\u2581who\u2581is&#34;,
+                         &#34;logprob&#34;: -12.980147361755371,
+                         &#34;raw_logprob&#34;: -12.980147361755371
+                    },
+                    &#34;topTokens&#34;: null,
+                    &#34;textRange&#34;: {&#34;start&#34;: 0, &#34;end&#34;: 6}
+               },
+               //...
+          ]
+     },
+     &#34;completions&#34;: [
+          {
+               &#34;data&#34;: {
+                    &#34;text&#34;: &#34;&lt;output&gt;&#34;,
+                    &#34;tokens&#34;: [
+                         {
+                              &#34;generatedToken&#34;: {
+                                   &#34;token&#34;: &#34;&lt;|newline|&gt;&#34;,
+                                   &#34;logprob&#34;: 0.0,
+                                   &#34;raw_logprob&#34;: -0.01293118204921484
+                              },
+                              &#34;topTokens&#34;: null,
+                              &#34;textRange&#34;: {&#34;start&#34;: 0, &#34;end&#34;: 1}
+                         },
+                         //...
+                    ]
+               },
+               &#34;finishReason&#34;: {&#34;reason&#34;: &#34;endoftext&#34;}
+          }
+     ]
+} 
+</code></pre><p><strong>Anthropic Claude 2</strong>
+Anthropic Claude 2 is another model available for text generation on Amazon Bedrock. Claude is a generative AI model by Anthropic. It is purpose built for conversations, summarization, question answering, workflow automation, coding, and more. It supports everything from sophisticated dialogue and creative content generation to detailed instruction following.</p>
+<p>Claude uses common parameters, such as temperature, Top P, Top K, and stop sequences. In addition, Claude models use the following unique parameter to further tune the response output.</p>
+<ul>
+<li>Maximum length (max_tokens_to_sample): Specify the maximum number of tokens to use in the generated response.</li>
+</ul>
+<p>The following example shows an input configuration used to invoke a response from Anthropic Claude 2 using Amazon Bedrock.</p>
+<pre tabindex="0"><code>Input
+
+{
+     &#34;prompt&#34;: &#34;\n\nHuman:&lt;prompt&gt;\n\nAnswer:&#34;,
+     &#34;max_tokens_to_sample&#34;: 300,
+     &#34;temperature&#34;: 0.5,
+     &#34;top_k&#34;: 250,
+     &#34;top_p&#34;: 1,
+     &#34;stop_sequences&#34;: [&#34;\n\nHuman:&#34;]
+} 
+</code></pre><pre tabindex="0"><code>Output
+{
+     &#34;completion&#34;: &#34;&lt;output&gt;&#34;,
+     &#34;stop_reason&#34;: &#34;stop_sequence&#34;
+} 
+</code></pre><h4 id="cohere-command">Cohere Command</h4>
+<p>Command is the flagship text generation model by Cohere. It is trained to follow user commands and be useful instantly in practical business applications, such as summarization, copywriting, dialogue, extraction, and question answering. Optimized for business priorities, Cohere is System and Organizations Control (SOC) 2 compliant and emphasizes security, privacy, and responsible AI.</p>
+<p>In addition to temperature, Top P, Top K, maximum length, and stop sequences, the Cohere Command model supports the following unique controls:</p>
+<ul>
+<li><strong>Return likelihoods (return_likelihoods)</strong>: Specify how and if the token likelihoods are returned with the response. You can specify the following options:
+<ul>
+<li><strong>GENERATION</strong>: This option only returns likelihoods for generated tokens.</li>
+<li><strong>ALL</strong>: This option returns likelihoods for all tokens.</li>
+<li><strong>NONE</strong>: This option doesn’t return any likelihoods. This is the default option.</li>
+</ul>
+</li>
+<li><strong>Stream (stream)</strong>: Specify true to return the response piece by piece in real time and false to return the complete response after the process finishes.</li>
+</ul>
+<p>The following example shows an input configuration used to invoke a response from Cohere Command using Amazon Bedrock.</p>
+<pre tabindex="0"><code>Input 
+
+{
+&#34;prompt&#34;: &#34;string&#34;,
+&#34;temperature&#34;: float,
+&#34;p&#34;: float,
+&#34;k&#34;: float,
+&#34;max_tokens&#34;: int,
+&#34;stop_sequences&#34;: [&#34;string&#34;],
+&#34;return_likelihoods&#34;: &#34;GENERATION|ALL|NONE&#34;,
+&#34;stream&#34;: boolean,
+&#34;num_generations&#34;: int
+} 
+</code></pre><h4 id="amazon-bedrock-set-up-and-configuration-related-apis">Amazon Bedrock set up and configuration related APIs</h4>
+<p><em><strong>ListFoundationModels</strong></em></p>
+<p>This method is used to provide a list of Amazon Bedrock foundation models that you can use. The following example demonstrates how to list the base models using Python.</p>
+<pre tabindex="0"><code>Input
+
+%pip install --upgrade boto3
+import boto3
+import json
+bedrock = boto3.client(service_name=&#39;bedrock&#39;)
+model_list=bedrock.list_foundation_models()
+for x in range(len(model_list.get(&#39;modelSummaries&#39;))):
+     print(model_list.get(&#39;modelSummaries&#39;)[x][&#39;modelId&#39;])
+</code></pre><p>You get a list of all the foundation models available on Amazon Bedrock and their respective metadata information. Following is an example of the output filtered on the model ID.</p>
+<pre tabindex="0"><code>Output
+amazon.titan-tg1-large
+amazon.titan-e1t-medium
+amazon.titan-embed-g1-text-02
+amazon.titan-text-express-v1
+amazon.titan-embed-text-v1
+stability.stable-diffusion-xl
+stability.stable-diffusion-xl-v0
+ai21.j2-grande-instruct
+ai21.j2-jumbo-instruct
+ai21.j2-mid
+ai21.j2-mid-v1
+ai21.j2-ultra
+ai21.j2-ultra-v1
+anthropic.claude-instant-v1
+anthropic.claude-v1
+anthropic.claude-v2
+cohere.command-text-v14
+</code></pre><h4 id="amazon-bedrock-runtime-related-apis">Amazon Bedrock runtime-related APIs</h4>
+<p><em><strong>InvokeModel</strong></em>
+This API invokes the specified Amazon Bedrock model to run inference using the input provided in the request body. You use <strong>InvokeModel</strong> to run inference for text models, image models, and embedding models.</p>
+<p><strong>Run inference on a text model</strong>
+You can send an invoke request to run inference on a model. Set the <strong>accept</strong> parameter to accept any content type in the response.</p>
+<p>The following example details how to generate text with Python using the prompt <strong>&ldquo;What is Amazon Bedrock?&rdquo;</strong></p>
+<pre tabindex="0"><code>Input
+
+bedrock_rt = boto3.client(service_name=&#39;bedrock-runtime&#39;)
+prompt = &#34;What is Amazon Bedrock?&#34;
+configs= {
+&#34;inputText&#34;: prompt,
+&#34;textGenerationConfig&#34;: {
+&#34;maxTokenCount&#34;: 4096,
+&#34;stopSequences&#34;: [],
+&#34;temperature&#34;:0,
+&#34;topP&#34;:1
+}
+}
+body=json.dumps(configs)
+modelId = &#39;amazon.titan-tg1-large&#39;
+accept = &#39;application/json&#39;
+contentType = &#39;application/json&#39;
+response = bedrock_rt.invoke_model(
+     body=body,
+     modelId=modelId,
+     accept=accept,
+     contentType=contentType
+)
+response_body = json.loads(response.get(&#39;body&#39;).read())
+print(response_body.get(&#39;results&#39;)[0].get(&#39;outputText&#39;))
+</code></pre><p><strong>Sample output</strong></p>
+<blockquote>
+<p>Amazon Bedrock is a managed service that makes foundation models from leading AI startups and Amazon Titan models available through APIs. For up-to-date information on Amazon Bedrock and how to use it, see the provided documentation and relevant FAQs.</p>
+</blockquote>
+<p><strong>InvokeModelWithResponseStream</strong>
+This API invokes the specified Amazon Bedrock model to run inference using the input provided. It returns the response in a stream.</p>
+<p>For streaming, you can set <strong>x-amzn-bedrock-accept-type</strong> in the header to contain the required content type of the response. In the following example, the header is set to accept any content type. The default value is <strong>application/json</strong>.</p>
+<p>The example details how to generate streaming text with Python. It uses the Amazon titan-tg1-large model and the prompt &ldquo;<strong>Write an essay for living on Mars using 10 sentences.</strong>&rdquo;</p>
+<pre tabindex="0"><code>Input
+
+prompt = &#34;Write an essay for living on Mars using 10 sentences.&#34;
+
+configs= {
+     &#34;inputText&#34;: prompt,
+     &#34;textGenerationConfig&#34;: {
+          &#34;temperature&#34;:0
+     }
+}
+
+body=json.dumps(configs)
+
+accept = &#39;application/json&#39;
+contentType = &#39;application/json&#39;
+modelId = &#39;amazon.titan-tg1-large&#39;
+
+response = bedrock_rt.invoke_model_with_response_stream(
+     modelId=modelId,
+     body=body,
+     accept=accept,
+     contentType=contentType
+)
+
+stream = response.get(&#39;body&#39;)
+if stream:
+     for event in stream:
+          chunk = event.get(&#39;chunk&#39;)
+          if chunk:
+               print((json.loads(chunk.get(&#39;bytes&#39;).decode())))
+</code></pre><p><strong>Sample output</strong></p>
+<blockquote>
+<p>{&lsquo;outputText&rsquo;: &ldquo;\nIt is difficult to imagine life on Mars because the planet is so different from Earth. The environment on Mars is extremely cold, dry, and dusty, making it difficult for organisms to survive without specialized adaptations. The planet&rsquo;s low gravity also affec&rdquo;, &lsquo;index&rsquo;: 0, &rsquo;totalOutputTextTokenCount&rsquo;: None, &lsquo;completionReason&rsquo;: None, &lsquo;inputTextTokenCount&rsquo;: 12}
+{&lsquo;outputText&rsquo;: &rsquo;ts human physical and mental health, requiring special accommodations. However, with proper planning and preparation, it is possible for humans to live on Mars. To establish a sustainable colony on Mars, astronauts would need to live in specially designed habitats, wear protective gear, and rely on artificial systems for food, water, and air. Communication with Earth would be limited, and astronauts would need to be self-sufficient&rsquo;, &lsquo;index&rsquo;: 0, &rsquo;totalOutputTextTokenCount&rsquo;: 128, &lsquo;completionReason&rsquo;: &lsquo;LENGTH&rsquo;, &lsquo;inputTextTokenCount&rsquo;: None}</p>
+</blockquote>
+<h4 id="data-protection-and-auditability">Data Protection and Auditability</h4>
+<p><strong>Comprehensive data protection and privacy</strong></p>
+<p>Amazon Bedrock provides comprehensive data protection and privacy. Your data used with Amazon Bedrock is not used for service improvement and is not shared with third-party model providers. You can use AWS PrivateLink with Amazon Bedrock to establish private connectivity between your FMs and your virtual private cloud (VPC) without exposing your traffic to the internet.</p>
+<p>Your data is encrypted in transit and at rest. You can customize FMs privately so you can control how your data is used and encrypted. Amazon Bedrock makes a separate copy of the base foundation model and trains the private copy of the model.</p>
+<p><strong>Secure your generative AI applications</strong></p>
+<p>To secure your custom FMs, you can use AWS security services to form your defense in depth security strategy. Your customized FMs are encrypted using AWS Key Management Service (AWS KMS) keys, and they are stored encrypted.</p>
+<p>By using AWS Identity and Access Management (IAM), you can control access to your customized FMs. You can allow or deny access to specific FMs, decide which services can get inferences, and choose who can log in to the Amazon Bedrock console.</p>
+<p><strong>Support for governance and auditability</strong></p>
+<p>Amazon Bedrock offers comprehensive monitoring and logging capabilities and tools you can use to address your governance and audit requirements.</p>
+<p>You can use Amazon CloudWatch to track usage metrics and build customized dashboards with metrics that you require for your audit purposes. Use AWS CloudTrail to monitor API activity and troubleshoot issues as you integrate other systems into your generative AI applications.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/4-rags/" title="RAG Overview"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/6-langchain/" title="Optimizing LLM Performance" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1728550173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1728550173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1728550173"></script>
+    <script src="/js/jquery.sticky.js?1728550173"></script>
+    <script src="/js/featherlight.min.js?1728550173"></script>
+    <script src="/js/highlight.pack.js?1728550173"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1728550173"></script>
+    <script src="/js/learn.js?1728550173"></script>
+    <script src="/js/hugo-learn.js?1728550173"></script>
+
+    <link href="/mermaid/mermaid.css?1728550173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1728550173"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

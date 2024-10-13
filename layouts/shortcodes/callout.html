@@ -1,0 +1,28 @@
+<div class="callout {{ .Get 0 | default " note" }}">
+    <strong>{{ .Get 0 | default "Note" }}</strong>: {{ .Inner | markdownify }}
+</div>
+
+<style>
+    .callout {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-left: 6px solid #eee;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+    }
+
+    .callout.warning {
+        border-color: #ffcc00;
+        background-color: #fff8e1;
+    }
+
+    .callout.tip {
+        border-color: #4caf50;
+        background-color: #e8f5e9;
+    }
+
+    .callout.note {
+        border-color: #2196f3;
+        background-color: #e3f2fd;
+    }
+</style>
