@@ -5,7 +5,7 @@ chapter : false
 pre : " <b> 3 </b> "
 ---
 
-![Bedrock](/static//images/3/1.png?featherlight=false&width=90pc)
+![Bedrock](../images/3/1.png?featherlight=false&width=90pc)
 
 A foundation model (FM) is in the center surrounded by components. These include frontend web application or mobile app, FM interface, machine learning (ML) environment, model training, enterprise datasets, vector database, text and image embeddings, and long-term memory store. Governance and security are integrated into all components.
 
@@ -15,7 +15,7 @@ At the heart of a generative AI application is the foundation model that powers 
 
 Foundation models provide the base on which you can build various generative AI applications. Large language models (LLMs) are a subset of foundation models that are trained on a large corpus of text data. 
 
-![Bedrock](/static/images/3/3.png)
+![Bedrock](../images/3/3.png)
 
 #### Interface and prompts
 
