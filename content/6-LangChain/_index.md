@@ -15,7 +15,7 @@ These challenges lead to hallucinations or inaccurate responses. A single prompt
 
 LangChain provides the software building blocks to reduce the complexity of building functionality from scratch. You can use it to take full advantage of the power of the LLMs.
 
-![Bedrock](/images/5/1.png?featherlight=false&width=90pc)
+![Bedrock](../images/5/1.png?featherlight=false&width=90pc)
 
 LLMs do not retain state between invocations, so the application must manage any context. For example, to give a chat experience, the LLM needs the conversation as part of the context to produce the correct results. Additionally, LLMs can develop reasoning to solve problems, such as multistep problems where the application needs to find information in steps to solve a problem. LangChain provides components to make it more efficient to perform the common tasks of managing context or the sequencing of steps when interacting with an LLM.
 
@@ -25,7 +25,7 @@ LangChain is open source and is currently available in three programming languag
 
 You can use these components to build applications, such as the Retrieval Augmented Generation (RAG) based question answering chatbots. You can also use these components for text summarization, code generation, and interacting with APIs. 
 
-![Bedrock](/images/5/2.png)
+![Bedrock](../images/5/2.png)
 
 #### Supported integrations for AWS
 
@@ -35,13 +35,13 @@ LangChain supports integrations with numerous software providers, including Amaz
 
 In the following lessons, you will learn about the most important AWS and LangChain integrations for models, prompt templates, indexes, memory, chains, and agents.
 
-![Bedrock](/images/5/3.png)
+![Bedrock](../images/5/3.png)
 
 **LLMs**
 
 LLMs take text as input and generate text as output, and LangChain provides LLM components to interact with different language models. The LLM class is an abstraction for working across different providers and is used by LangChain to interact with an LLM model.
 
-![Bedrock](/images/5/5.jpg)
+![Bedrock](../images/5/5.jpg)
 
 **Amazon Bedrock**
 
@@ -71,7 +71,7 @@ print(response)
 
 Conversational interfaces, such as chatbots and virtual assistants, can lower the cost of customer support, while improving customer experience. LangChain provides a chat models component to build conversational applications. This component accepts content in the form of messages that contain input text.
 
-![Bedrock](/images/5/6.png)
+![Bedrock](../images/5/6.png)
 
 **Chat models example**
 
@@ -102,7 +102,7 @@ Text embedding models take text as input and then output numerical representatio
 
 The embeddings are used in various natural language processing (NLP) tasks, such as sentiment analysis, text classification, and information retrieval. You can save the embeddings in a vector database to improve search accuracy and for faster retrieval.
 
-![Bedrock](/images/5/7.jpg)
+![Bedrock](../images/5/7.jpg)
 
 **Embedding example**
 
@@ -142,7 +142,7 @@ In the following example, the baseline sentence is about a dog that likes to eat
 
 LangChain provides predefined prompt templates in the form of text strings that can take a set of parameters from the user and generate a prompt. Prompt templates make prompt engineering more efficient and make it possible to reuse prompts.
 
-![Bedrock](/images/5/8.png)
+![Bedrock](../images/5/8.png)
 
 **Prompt example**
 

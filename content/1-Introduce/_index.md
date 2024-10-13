@@ -44,19 +44,19 @@ For model inference costs depend on the specific model you use and the number of
 These are some of the models examples that has Bedrock, you just have to enter whatever you need in the prompt section and it will give you the response.
 
 * **Summarization**
-![Bedrock](/images/1/1.avif?featherlight=false&width=90pc)
+![Bedrock](..../images/1/1.avif?featherlight=false&width=90pc)
 
 * **Text generation**
-![Bedrock](/images/1/2.avif?featherlight=false&width=90pc)
+![Bedrock](../images/1/2.avif?featherlight=false&width=90pc)
 
 * **Code generation**
-![Bedrock](/images/1/3.avif?featherlight=false&width=90pc)
+![Bedrock](../images/1/3.avif?featherlight=false&width=90pc)
 
 * **Image generation**
-![Bedrock](/images/1/4.avif?featherlight=false&width=90pc)
+![Bedrock](../images/1/4.avif?featherlight=false&width=90pc)
 
 * **Information extraction**
-![Bedrock](/images/1/5.avif?featherlight=false&width=90pc)
+![Bedrock](../images/1/5.avif?featherlight=false&width=90pc)
 
 #### Conclusion
 Amazon Bedrock represents a significant leap forward in making generative AI accessible and practical for businesses of all sizes. With its robust features, seamless integration with AWS services, and the ability to customize models to fit specific needs, Bedrock empowers developers to innovate without the steep learning curve traditionally associated with AI. Whether you're looking to enhance customer experiences, streamline content creation, or gain deeper insights from your data, Amazon Bedrock offers, secure, and flexible platform to turm your AI-driven vsions into reality. As the landscape of AI continues to evolve, embracting tools like Bedrock could be the key to statying ahead in a competitive market.

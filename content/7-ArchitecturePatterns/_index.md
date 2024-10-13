@@ -17,7 +17,7 @@ In this module, you will learn about various architecture patterns that can be i
 * LangChain agents
 * Agents for Amazon Bedrock
 
-![Bedrock](/images/7/1.png)
+![Bedrock](../images/7/1.png)
 
 #### Text generation
 
@@ -25,13 +25,13 @@ Text generation is a term used for any use case where the output of the model is
 
 The architecture pattern for text generation using Amazon Bedrock is illustrated in the following image. You can pass the Amazon Bedrock foundation model a prompt using an Amazon Bedrock playground or an Amazon Bedrock API call. The model will generate text based on the input prompt you provide. 
 
-![Bedrock](/images/7/2.png)
+![Bedrock](../images/7/2.png)
 
 **Text generation with LangChain**
 
 For text generation, you can also use a LangChain layer to add a conversation chain to specific text generation use cases. LangChain is a powerful open source library. It pairs well with some of the strongest text generation FMs on Amazon Bedrock to efficiently create conversations, text generation, and more. The architecture pattern for text generation with LangChain is illustrated in the following figure.
 
-![Bedrock](/images/7/3.png)
+![Bedrock](../images/7/3.png)
 
 #### Text summarization
 
@@ -46,7 +46,7 @@ With advances in generative AI and large language models (LLMs), the field of te
 
 Question answering is an important task that involves extracting answers to factual queries posed in natural language. Typically, a question answering system processes a query against a knowledge base containing structured or unstructured data and generates a response with accurate information. Ensuring high accuracy is key to developing a useful, reliable, and trustworthy question answering system, especially for enterprise use cases. 
 
-![Bedrock](/images/7/4.png)
+![Bedrock](../images/7/4.png)
 
 RAG involves the following steps:
 
@@ -55,7 +55,7 @@ RAG involves the following steps:
 3. The user's question is used to retrieve the relevant chunks of data, which will act as the context, from the knowledge base. The user's question and the context are then passed to the FM to get an accurate response to the user.
 4. When the user poses a prompt, the FM identifies the context and refers to the knowledge base to get the relevant chunks of data. The FM then interacts with another FM to get an accurate response to the user. 
 
-![Bedrock](/images/7/5.png)
+![Bedrock](../images/7/5.png)
 
 #### Chatbots
 
@@ -63,7 +63,7 @@ Chatbots use NLP and machine learning (ML) algorithms to understand and respond 
 
 A basic architectural pattern of a chatbot use case with Amazon Bedrock is illustrated in the following diagram. 
 
-![Bedrock](/images/7/6.png)
+![Bedrock](../images/7/6.png)
 
 This architecture includes the following steps:
 
@@ -102,7 +102,7 @@ A simple architecture for a context-aware chatbot is shown in the following diag
 
     - b. The response (answer) is given to the user at the same time.
 
-![Bedrock](/images/7/7.png)
+![Bedrock](../images/7/7.png)
 
 #### Code Generation
 
@@ -116,7 +116,7 @@ The steps are as follows:
 2. A foundation model processes the input data.
 3. The model returns the generated code.
 
-![Bedrock](/images/7/8.png)
+![Bedrock](../images/7/8.png)
 
 #### LangChain agents
 
