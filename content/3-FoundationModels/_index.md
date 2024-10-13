@@ -11,7 +11,9 @@ A foundation model (FM) is in the center surrounded by components. These include
 
 #### Foundation models interface
 
-At the heart of a generative AI application is the foundation model that powers it. Foundation models are models trained on broad data at scale that can be adapted to various downstream tasks. ![Bedrock](../images/3/2.png)
+At the heart of a generative AI application is the foundation model that powers it. Foundation models are models trained on broad data at scale that can be adapted to various downstream tasks. 
+
+![Bedrock](../images/3/2.png)
 
 Foundation models provide the base on which you can build various generative AI applications. Large language models (LLMs) are a subset of foundation models that are trained on a large corpus of text data. 
 

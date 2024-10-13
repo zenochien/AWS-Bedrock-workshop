@@ -44,7 +44,7 @@ For model inference costs depend on the specific model you use and the number of
 These are some of the models examples that has Bedrock, you just have to enter whatever you need in the prompt section and it will give you the response.
 
 * **Summarization**
-![Bedrock](..../images/1/1.avif?featherlight=false&width=90pc)
+![Bedrock](../images/1/1.avif?featherlight=false&width=90pc)
 
 * **Text generation**
 ![Bedrock](../images/1/2.avif?featherlight=false&width=90pc)
